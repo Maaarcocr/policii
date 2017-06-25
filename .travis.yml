@@ -1,6 +1,6 @@
 before-install: cd policii
 
-languages: node_js
+language: node_js
 
 before-script: npm install 
 
