@@ -1,17 +1,15 @@
-before_install: cd policii
-
 before_install:
 - cd policii
 - chmod +x deploy.sh
 language: node_js
-
-node_js: 
-    - "node"
-
-before_script: npm install 
-
+branches:
+  except:
+  - gh-pages
+node_js:
+- node
+before_script: npm install
 script: npm run build
 after_script: "./deploy.sh"
 env:
   global:
-    secure: BD3gFTuOFwl7DGdgrkX5mMEMIYfPHDIr9i/nwWoJ5ZN36WokxMyyanuVFCc1Vbbe+vU1lCTA4E5YnHfr7KWfv1CXFdb1w4+CPowbwo8Fn68xUeL0ntLUmRsClWplUqIIZaZuo9tL89eldDwZ5W1evLgYOnwOZJB+H7MP5MCWU1M9jACUTHond9j0LOIpy0swwzB4cHsAAO4E6h5X+01iqgMwa72WqLH8I/NUiKnIBqeLYXAZZvcsXuh/L5bXfskRaGw7J/ptOpOOYy4Z79o7f70+4S8tH1Ww9MnpVK5E1A5ic/MSQrJfFuMm6IeOrqSKFb1wLwV4VtkRAUzJ4pcDwPVAadr1+7elHhUCvb8K+esehPSQkaRp6fU4GsxvU+TRQAhLiT8WatBksgWqmGrc40oXnjgXQW0tQPCrH1vAHPbb4aRcmT8PugQjMW9zUDFEUF7M1vhnKSo+TegS42o8ufd+lPiZjciu96NT56pysBWvNCnFYn2z+LdD+XbzEIpml0M2xfMIdeaYDTdUXWcI7wlj0MEVpruT/yTHQ0HPtmnOIbnYbbBgU17UG6qmsnZCWQ/XbG/94R+UmfSWGgaMfVhdLZw9jlv6pTMjJ/BcvTWGZm2gUSVAoSfwwyPrK60JEtzLAgCMNwCxQ9cFMka2Q4IdFmv1pa5p/tJW7Y21FQ8=
+    secure: F+iS2ScrDroRLqA7xoYrE78ia8GW7XQ71JMF81Ox2D61k+mbrXWVdviTu7h7CTQfy1B921wPN42zr5LyjrXBV32sO0pg7DtUkJNwtcLTk5lSKAxIjwd8DDI3edPY0Abk7pzCRozUUI+3QVZ+BYhMH8yArUVimwONN0Mqi3yMT0f9PgyZn/8hjrEHTHNXfF7IpLIQkJvkxljJ/TF5MQOCQ6o00UkSbklU3ENf9585fiyRh3i2bGSsbuoMulda6GY02WUXKe/ytXhcwH+KZ0KcLPu5smmlLtWoEMJfagnid3KJnN1NbOlUJonvNei2B+fEx1wcr2fiyAv1mmuGhhFgd/sJBLMhCgGcM/fa1kN+lD60nhmknQHcONXQFPeh4kLAN1krJTeyzkrqvb9eBv1GuW8nb+FeRPN026x2VmPUEDAY//TPZSf6DaMJc4M8BWGqduOH1UrX+TmMeJEh+MqN77Z5FhNA5/Ew8CFiK+aG1GPk9Ep/EyYyc5SH76+GqwSQNcD9j6gCKa9LUC/khJA9T9sDFGdJuupOLYtIWdGH+fUqj1/V/xO6ZJHOXYKuKaXamCuQHPx+RgGKALZhUq7pgoYdDxwaBTsf9BocgOrcdh7BF6avq9K80+Jrt/stLIc/9cY5hq9zS1g19nejBVQsshBih923LKRPRfpc3n6jtnI=
