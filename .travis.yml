@@ -1,5 +1,8 @@
 before_install: cd policii
 
+before_install:
+- cd policii
+- chmod +x deploy.sh
 language: node_js
 
 node_js: 
@@ -8,3 +11,7 @@ node_js:
 before_script: npm install 
 
 script: npm run build
+after_script: "./deploy.sh"
+env:
+  global:
+    secure: BD3gFTuOFwl7DGdgrkX5mMEMIYfPHDIr9i/nwWoJ5ZN36WokxMyyanuVFCc1Vbbe+vU1lCTA4E5YnHfr7KWfv1CXFdb1w4+CPowbwo8Fn68xUeL0ntLUmRsClWplUqIIZaZuo9tL89eldDwZ5W1evLgYOnwOZJB+H7MP5MCWU1M9jACUTHond9j0LOIpy0swwzB4cHsAAO4E6h5X+01iqgMwa72WqLH8I/NUiKnIBqeLYXAZZvcsXuh/L5bXfskRaGw7J/ptOpOOYy4Z79o7f70+4S8tH1Ww9MnpVK5E1A5ic/MSQrJfFuMm6IeOrqSKFb1wLwV4VtkRAUzJ4pcDwPVAadr1+7elHhUCvb8K+esehPSQkaRp6fU4GsxvU+TRQAhLiT8WatBksgWqmGrc40oXnjgXQW0tQPCrH1vAHPbb4aRcmT8PugQjMW9zUDFEUF7M1vhnKSo+TegS42o8ufd+lPiZjciu96NT56pysBWvNCnFYn2z+LdD+XbzEIpml0M2xfMIdeaYDTdUXWcI7wlj0MEVpruT/yTHQ0HPtmnOIbnYbbBgU17UG6qmsnZCWQ/XbG/94R+UmfSWGgaMfVhdLZw9jlv6pTMjJ/BcvTWGZm2gUSVAoSfwwyPrK60JEtzLAgCMNwCxQ9cFMka2Q4IdFmv1pa5p/tJW7Y21FQ8=
