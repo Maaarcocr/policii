@@ -1,0 +1,7 @@
+before-install: cd policii
+
+languages: node_js
+
+before-script: npm install 
+
+script: npm run build
