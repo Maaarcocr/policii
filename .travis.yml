@@ -2,6 +2,9 @@ before_install: cd policii
 
 language: node_js
 
+node_js: 
+    - "node"
+
 before_script: npm install 
 
 script: npm run build
