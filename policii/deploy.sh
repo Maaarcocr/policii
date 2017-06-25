@@ -13,7 +13,7 @@ commit_website_files() {
 }
 
 upload_files() {
-  git remote add origin-pages https://${GH_TOKEN}@github.com/Maaarcocr/policii 
+  git remote add origin-pages https://Maaarcocr:${GH_TOKEN}@github.com/Maaarcocr/policii 
   git push -f --quiet --set-upstream origin-pages gh-pages 
 }
 
